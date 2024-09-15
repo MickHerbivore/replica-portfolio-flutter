@@ -12,6 +12,7 @@ class HomeScreen extends StatelessWidget {
     final screenSize = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         flexibleSpace: const AppBarMenu(),
       ),
       body: Container(
