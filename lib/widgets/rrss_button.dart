@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:url_launcher/url_launcher.dart';
+import 'package:replica/utils/utils.dart';
 
 class RrssButton extends StatelessWidget {
   final String iconSrc;
@@ -17,20 +17,10 @@ class RrssButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return ElevatedButton.icon(
       onPressed: () {
-        _launchURL(url);
+        launchURL(url);
       },
       icon: SvgPicture.asset(iconSrc, width: 16, height: 16),
       label: Text(text), // Texto a mostrar
     );
-  }
-}
-
-Future<void> _launchURL(String url) async {
-  final Uri uri = Uri.parse(url);
-  if (!await launchUrl(
-    uri,
-    mode: LaunchMode.externalApplication,
-  )) {
-    throw Exception('No se pudo abrir $url');
   }
 }

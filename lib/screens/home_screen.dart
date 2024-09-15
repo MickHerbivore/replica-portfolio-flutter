@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:replica/widgets/app_bar_menu.dart';
+import 'package:replica/widgets/footer.dart';
 import 'package:replica/widgets/home_first_view.dart';
+import 'package:replica/widgets/skills.dart';
 
 
 class HomeScreen extends StatelessWidget {
@@ -28,17 +30,18 @@ class HomeScreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 HomeFirstView(screenSize: screenSize),
-                
-
+                Skills(screenSize: screenSize),
+                const Footer()
               ]
             )
           ),
         ),
-        
       )
     );
   }
 }
+
+
 
 
 
