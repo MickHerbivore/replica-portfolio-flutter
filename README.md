@@ -1,3 +1,3 @@
-# replica
+# Replica Portfolio
 
-A new Flutter project.
+A recreation of the portfolio website mickherbivore.com made with Flutter.
