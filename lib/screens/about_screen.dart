@@ -15,7 +15,7 @@ class AboutScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: false,
-        flexibleSpace: const AppBarMenu(),
+        flexibleSpace: const AppBarMenu(currentRoute: 'about'),
       ),
       body: Container(
         decoration: const BoxDecoration(

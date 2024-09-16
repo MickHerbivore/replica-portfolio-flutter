@@ -3,7 +3,10 @@ import 'package:flutter/material.dart';
 class AppBarMenu extends StatelessWidget {
   const AppBarMenu({
     super.key,
+    this.currentRoute = '',
   });
+
+  final String currentRoute;
 
   @override
   Widget build(BuildContext context) {
@@ -30,18 +33,44 @@ class AppBarMenu extends StatelessWidget {
               onTap: () {
                   Navigator.pushNamed(context, 'projects');
               },
-              child: const Text(
-                'Projects',
-                style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+              child: Container(
+                decoration: BoxDecoration(
+                  border: Border(
+                    bottom: BorderSide(
+                      color: currentRoute == 'projects' ? const Color.fromRGBO(139, 92, 246, 1) : Colors.transparent,
+                      width: 3
+                    )
+                  )
+                ),
+                child: const Text(
+                  'Projects',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold
+                  ),
+                ),
               ),
             ),
             InkWell(
               onTap: () {
                   Navigator.pushNamed(context, 'about');
               },
-              child: const Text(
-                'About',
-                style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+              child: Container(
+                decoration: BoxDecoration(
+                  border: Border(
+                    bottom: BorderSide(
+                      color: currentRoute == 'about' ? const Color.fromRGBO(139, 92, 246, 1) : Colors.transparent,
+                      width: 3
+                    )
+                  )
+                ),
+                child: const Text(
+                  'About',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold
+                  ),
+                ),
               ),
             ),
             Container(

@@ -11,7 +11,7 @@ class ProjectsScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: false,
-        flexibleSpace: const AppBarMenu(),
+        flexibleSpace: const AppBarMenu(currentRoute: 'projects'),
       ),
       body: Container(
         decoration: const BoxDecoration(
